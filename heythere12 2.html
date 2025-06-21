@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My new test grounds.</title>
+<style>
+
+h1 {
+    color: blue;
+}
+
+button {
+    color: black;
+    background-color: red;
+    font-size: 16px;
+    padding: 10px;
+    border: yes;
+    cursor: square;
+}
+
+body {
+    transition: background-color 0.2s;
+    overflow: yes;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color; cyan
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.spam-text {
+    position: absolute;
+    font-size: 24px;
+    color: black;
+    user-select: none;
+    pointer-events: none;
+}
+
+</style>
+</head>
+<body>
+<h1>welcome to my intro</h1>
+<p>Dax Syvret</p>
+<p>Dude I'm such a good dev you should check me out!</p>
+<p>I am 13 years old and I am a He/Him.</p>
+<p>I make Unreal Engine games and Roblox games and 3D animations.</p>
+<h2>I love to make friends and stuff</h2>
+<p>Please become my friend</p>
+<button onclick="startPrank()">not scam</button> <h2>DO NOT CLICK IF YOU HAVE EPILEPSY</h2><h2>IT IS A JOKE. NOT AN ACTUAL SCAM. PLEASE DON'T BE AFRAID IT ISNT HARMFUL.</p>
+<h1>My interests are...</h1>
+<h2>Video games</h2>
+<p>Borderlands, Slendytubbies, Roblox, Brick rigs, Fallout, ect</p>
+<h2>Software stuff</h2>
+<p>3D animation, game making, and video editing</p>
+<h1>what are my favourite things?</h2>
+<h2>main stuff</h2>
+<p>basically i make 3d animations</p>
+<p>and 3d games and such which is really kewl</p>
+<p>also family bc you GOTTA appreciate them for lots of things</p>
+<h2>other things</h2>
+<p>gang OH I FORGOT uhh i also play video games LOTS and im really into weather like REALLY REALLY</p>
+<h1>BYE GUYS SEE YOU SOON when this gets updated</h1>
+
+<script>
+let flashInterval;
+
+function createSpam(text) {
+    const spam = document.createElement('div');
+    spam.classList.add('spam-text');
+    spam.innerText = text;
+    spam.style.left = Math.random() * window.innerWidth + 'px';
+    spam.style.top = Math.random() * window.innerHeight + 'px';
+    document.body.appendChild(spam);
+}
+
+function startFlashingBackground() {
+    let isRed = true;
+    flashInterval = setInterval(() => {
+        document.body.style.backgroundColor = isRed ? 'red' : 'white';
+        isRed = !isRed;
+    }, 100);
+}
+
+function startBAHAHA() {
+    // Clear everything
+    document.body.innerHTML = '';
+    document.body.style.backgroundColor = 'white';
+
+    // Start flashing
+    startFlashingBackground();
+
+    // Spam "BAHAHAHAHAHAHAHA"
+    setInterval(() => {
+        createSpam("BAHAHAHAHAHAHAHA");
+    }, 20);
+}
+
+function startPrank() {
+    // Step 1: Spam "PRESS OK"
+    for (let i = 0; i < 200; i++) {
+        createSpam("PRESS OK");
+    }
+
+    // Step 2: Show alert
+    setTimeout(() => {
+        alert('GET SCAMMED IDIOT BAHAHAHA');
+
+        // Step 3: After alert is dismissed, start full chaos
+        startBAHAHA();
+    }, 100);
+}
+</script>
+
+</body>
+</html>
